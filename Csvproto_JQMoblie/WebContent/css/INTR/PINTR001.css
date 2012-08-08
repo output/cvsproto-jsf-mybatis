@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* CSS Document */
+div#MainPanel .noborder {
+  border: none;
+}
+
+table#MainTable {
+  border: none;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.inputType{
+ background: transparent;
+ border-top-color: transparent;
+ border-right-color: transparent;
+ border-left-color: transparent;
+ border-bottom-color: black;
+}
+
+.imgFilter{
+   -webkit-filter: grayscale(0.5) blur(0px);
+   position:absolute;
+left:0px;
+top:0px;
+  z-index: -1;
+}
+
+.theme{
+  -webkit-filter: grayscale(0.3) blur(0px);
+}
+
+.themeBlack{
+   -webkit-filter: grayscale(0.9) blur(0px); 
+}
+
+
+div#loginPanel{
+ background: white;
+  width: 20%;
+  position:relative;
+ margin:0px auto;
+  text-align:center;
+  vertical-align:middle;
+}

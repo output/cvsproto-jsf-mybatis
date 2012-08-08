@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/* CSS Document */
+div#MainPane .noborder {
+  border: none;
+}
+
+table#MainTable {
+  border: none;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.inputType{
+ background: transparent;
+ border-top-color: transparent;
+ border-right-color: transparent;
+ border-left-color: transparent;
+ border-bottom-color: black;
+}
+
+.imgFilter{
+   -webkit-filter: grayscale(0.9) blur(0px);
+}
+
+.theme{
+  -webkit-filter: grayscale(0.9) blur(5px);
+}

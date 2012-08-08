@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="PINTR001" >
+
+  <resultMap
+    id="ResultMap01"
+    class="li.kang.wang.badan.intr.pintr001.db.dto.UserInfo" >
+    <result
+      column="username"      javaType="string"      jdbcType="VARCHAR"      property="username" />
+    <result
+      column="password"      javaType="string"      jdbcType="VARCHAR"      property="password" />
+  </resultMap>
+
+  <!-- 选择用户信息 -->
+  <select
+    id="getUserInfo"
+    parameterClass="li.kang.wang.badan.intr.pintr001.db.dto.UserInfo"
+    resultMap="ResultMap01" >
+        SELECT
+              username, password
+        FROM
+              user
+       WHERE 
+              username = #username:VARCHAR#
+       AND 
+              password = #password:VARCHAR#
+  </select>
+  
+  <!-- 选择用户信息 -->
+  <select
+    id="getAllUserInfo"
+    parameterClass="li.kang.wang.badan.intr.pintr001.db.dto.UserInfo"
+    resultMap="ResultMap01" >
+        SELECT
+              username, password
+        FROM
+              user
+  </select>
+
+</sqlMap>
