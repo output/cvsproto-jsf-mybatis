@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+<form-beans>
+	<form-bean name="SZAB0111" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB0111Form"/>
+	<form-bean name="SZAB011C" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB011CForm"/>
+	<form-bean name="SZAB011D" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB011DForm"/>
+</form-beans>
+  <action-mappings>
+	<action name="SZAB0111" parameter="clear,toUpdate" path="/SZAB0111Init" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB0111Action" validate="false">
+		<forward name="unspecified" path="/ZAB01/SZAB0111.jsp" />
+	</action>
+    <action name="SZAB0111" parameter="clear" path="/SZAB0111Clear" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB0111Action" validate="false" >
+      <forward name="Clear" path="/ZAB01/SZAB0111.jsp"/>
+      <forward name="unspecified" path="/ZAB01/SZAB0111.jsp"/>
+    </action>
+    <action name="SZAB0111" parameter="clear,toUpdate,login" path="/SZAB0111" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB0111Action" input="/ZAB01/SZAB0111.jsp" validate="true" >
+      <forward name="Clear" path="/ZAB01/SZAB0111.jsp"/>
+      <forward name="ToUpdate" path="/ZAB01/SZAB011C.jsp"/>
+      <forward name="unspecified" path="/ZAB01/SZAB0111.jsp"/>
+      <forward name="error" path="/ZAB01/SZABERR.jsp"/>
+      <forward name="right" path="/ZAB01/SZABOK.jsp"/>
+    </action>
+    <action name="SZAB011C" parameter="updInpOk,updInpBack" path="/SZAB011C" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB011CAction">
+      <forward name="UpdInpBack" path="/ZAB01/SZAB0111.jsp"/>
+      <forward name="UpdInpOk" path="/ZAB01/SZAB011D.jsp"/>
+      <forward name="unspecified" path="/ZAB01/SZAB011C.jsp"/>
+    </action>
+    <action name="SZAB011D" parameter="updCompOk" path="/SZAB011D" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB011DAction">
+      <forward name="UpdCompOk" path="/ZAB01/SZAB0111.jsp"/>
+      <forward name="unspecified" path="/ZAB01/SZAB011D.jsp"/>
+    </action>
+  </action-mappings>
+
+<controller processorClass="org.springframework.web.struts.AutowiringRequestProcessor"/>
+      <message-resources parameter="errmessage"/>
+  
+  <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+    <set-property property="contextConfigLocation" value="/WEB-INF/applicationContext.xml, /WEB-INF/jdbc-application-context.xml"/>
+  </plug-in>
+  
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/org/apache/struts/validator/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+</struts-config>

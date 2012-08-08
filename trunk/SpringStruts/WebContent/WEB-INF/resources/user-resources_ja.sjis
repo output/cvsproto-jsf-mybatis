@@ -1,0 +1,269 @@
+############## error design.############################################
+#
+errors.header=<div class="message_error">
+errors.footer=</div>
+errors.suffix=<br>
+
+
+####### Orteusから出力されるメッセージ 2005/09/01取り込み###############
+# system error
+errors.system=エラー：システムエラーが発生しました。エラー内容は、以下です。<br>{0}
+
+# sessiontimeout error
+errors.timeout=エラー：セッションタイムアウトが発生しました。再度ログインしてください。
+
+# illegal access error
+errors.access=エラー：不正なアクセスです。ログイン画面から操作してください。
+
+# operation missing
+errors.operation=エラー：操作ミスです。エラー内容は、以下です。<br>{0}
+
+# goto menu message
+errors.gotomenu=エラー：不正な画面遷移です。再度メニューから操作してください。
+
+# indexed message template
+errors.indexed.property={0} ({1} 行目)
+
+# Standard error messages for validator framework checks
+errors.required=エラー：{0} は必須です。
+errors.minlength=エラー：{0} は {1} 文字以上としてください。
+errors.maxlength=エラー：{0} は {1} 文字未満としてください。
+errors.invalid=エラー：{0} を入力してください。
+errors.byte=エラー：{0} は byte 値の必要があります。
+errors.short=エラー：{0} は short 値の必要があります。
+errors.integer=エラー：{0} は integer 値の必要があります。
+errors.long=エラー：{0} は long 値の必要があります。
+errors.float=エラー：{0} は float 値の必要があります。
+errors.double=エラー：{0} は double 値の必要があります。
+errors.date=エラー：{0} は日付ではありません。
+errors.range=エラー：{0} は範囲 {1} \u301c {2} にありません。
+errors.creditcard=エラー：{0} は正しいクレジットカード番号ではありません。
+errors.email=エラー：{0} は不正な e-mail アドレスです。
+errors.length=エラー：{0} の桁数が足りません。
+
+# orteus
+errors.exRequired=エラー：{0} は必須です。
+errors.numeric=エラー：{0} は正しい数値ではありません。
+errors.alphabetic=エラー：{0} は正しい英字ではありません。
+errors.alphaNumeric=エラー：{0} は正しい英数字ではありません。
+errors.charByteSize=エラー：{0} の全角・半角文字をチェックしてください。
+errors.zenkakuKana=エラー：{0} に全角カタカナ以外の文字が含まれています。
+errors.hankakuKana=エラー：{0} に半角カナ以外の文字が含まれています。
+errors.character=エラー：{0} に不正な文字が含まれています。
+errors.stringMatch=エラー：{0} は正しい文字ではありません。
+errors.maxRow=エラー：{0} の行数が多すぎます。
+errors.stringLength=エラー：{0} の文字数が長すぎます。
+errors.maxColumn=エラー：{0} の列数が多すぎます。
+errors.integerFormat=エラー：{0} は正しい整数ではありません。
+errors.floatFormat=エラー：{0} は正しい小数ではありません。
+errors.digits=エラー：{0} の桁数が多すぎます。
+errors.nonZero=エラー：{0} は０より大きい値を入力して下さい。
+errors.vrange=エラー：{0} が正しい範囲にありません。
+errors.dateFormat=エラー：{0} は正しい日付ではありません。
+errors.simpleDateFormat=エラー：{0} は正しい日付ではありません。
+errors.beforeDateAbsolute=エラー：{0} の日付が正しい範囲にありません。
+errors.afterDateAbsolute=エラー：{0} の日付が正しい範囲にありません。
+errors.beforeDateRelative=エラー：{0} の日付が正しい範囲にありません。
+errors.afterDateRelative=エラー：{0} の日付が正しい範囲にありません。
+errors.vsuffix=エラー：{0} のサフィックスが不正です。
+errors.postalCode=エラー：{0} は正しい郵便番号ではありません。
+errors.phoneNumber=エラー：{0} は不正な電話番号です。
+errors.matchStringNum=エラー：明細情報{0}の商品コードが１０桁ではありません。商品コードは半角数字１０桁（ハイフン含む）で入力してください。
+
+############## pj0 error/guide message.#################################
+#
+
+MZZA001I=ガイド：[MZZA001I] ログインIDとパスワードを入力してください。
+MZZA001E=エラー：[MZZA001E] ログインに失敗しました。ユーザＩＤ、パスワードを見直してください。
+
+######(共通業務(ログインメニュー):MZZZ2)
+MZZZ201I=ガイド：[MZZZ201I] 実行したい業務を選択してください。
+
+
+######(共通基盤:MZZZ0)
+# PJ0では存在しない
+
+
+######(共通業務(業務全般で使う):MZZZ1)
+MZZZ101E=エラー：[MZZZ101E] 入力された情報はすでに登録されています(一意制約違反)。
+MZZZ102E=エラー：[MZZZ102E] 入力された情報は現在登録できません(DBロック)。
+MZZZ103E=エラー：[MZZZ103E] 入力された情報は既に他のユーザによって変更されています(排他制約違反)。
+MZZZ104E=エラー：[MZZZ104E] 検索できませんでした。検索条件を見直してください。
+MZZZ105E=エラー：[MZZZ105E] データがありませんでした。
+MZZZ106E=エラー：[MZZZ106E] サイズが多すぎます。条件を絞りこんでください。
+MZZZ107E=エラー：[MZZZ107E] サイズが多すぎます。データの件数を分割してアップロードしてください。
+MZZZ108E=エラー：[MZZZ108E] 件数が多すぎます。条件を絞りこんでください。
+MZZZ109E=エラー：[MZZZ109E] アップロード対象データ件数が多すぎます。データの件数を分割してアップロードしてください。
+MZZZ110E=エラー：[MZZZ110E] 指定されたファイル名が不正です。
+MZZZ111E=エラー：[MZZZ111E] データが取得できませんでした。
+MZZZ112E=エラー：[MZZZ112E] 件数が多すぎます。条件を絞りこんでください。
+MZZZ113E=エラー：[MZZZ113E] {0}の{1}は存在しません。
+
+
+
+# 商品管理
+MZAA001I=ガイド：[MZAA001I] 登録する在庫情報を入力してください。
+MZAA002I=ガイド：[MZAA002I] 在庫情報を登録します。よろしいですか？
+MZAA003I=ガイド：[MZAA003I] 在庫情報を登録しました。
+MZAA004I=ガイド：[MZAA004I] 検索条件を入力してください。
+MZAA005I=ガイド：[MZAA005I] 商品コードの指定は、指定無し（全件検索）・上３桁（部分検索）・上３桁＋下６桁（完全一致）が可能です。
+MZAA006I=ガイド：[MZAA006I] 在庫情報を更新するには、対象となる商品を選択し、更新ボタンを押下してください。
+MZAA007I=ガイド：[MZAA007I] 在庫情報を削除するには、対象となる商品を選択し、削除ボタンを押下してください。
+MZAA008I=ガイド：[MZAA008I] 更新する在庫情報を入力してください。
+MZAA009I=ガイド：[MZAA009I] 上記のように在庫情報を更新します。よろしいですか？
+MZAA010I=ガイド：[MZAA010I] 在庫情報を更新しました。
+MZAA011I=ガイド：[MZAA011I] 上記の在庫情報を削除します。よろしいですか？
+MZAA012I=ガイド：[MZAA012I] 在庫情報を削除しました。
+
+MZAA001E=エラー：[MZAA001E] 商品区分は必須項目です。セレクトボックスで該当区分を選択してください。
+MZAA002E=エラー：[MZAA002E] 入力された商品コードはDBにすでに登録されています。商品コードを確認し登録しなおしてください。
+MZAA003E=エラー：[MZAA003E] 商品コードの指定は、「指定無し」「3桁指定」「3桁＋6桁指定」のみ可能です。
+MZAA004E=エラー：[MZAA004E] 更新または削除対象を選択してください。
+MZAA005E=エラー：[MZAA005E] 入力された情報は既に他のユーザによって変更または削除されています。
+
+projectzero.productmst.name=商品マスタ
+projectzero.productcd.name=商品コード
+
+errors.invalid.exactLength.productcode1=は３桁で記述してください
+errors.invalid.exactLength.productcode2=は６桁で記述してください
+
+# 入庫管理
+MZAB001I=ガイド：[MZAB001I] 入庫情報ファイルを選択し、登録ボタンを押下してください。
+MZAB002I=ガイド：[MZAB002I] 入庫後数量は、現時点の在庫数より算出したものであり、実際の登録時の件数と一致しない可能性があります。
+MZAB003I=ガイド：[MZAB003I] 上記のように入庫情報を登録します。よろしいですか？
+MZAB004I=ガイド：[MZAB004I] 処理結果を確認し、次へ進んでください。
+
+MZAB001E=エラー：[MZAB001E] {0}行目の {1} 項目の内容が不正です。
+MZAB002E=エラー：[MZAB002E] {0}行目の商品コード '{1}' はマスタ上に存在しません。
+MZAB003E=エラー：[MZAB003E] {0}行目の入庫数量で最大値を超過します。(更新値={1})
+MZAB004E=エラー：[MZAB004E] 入庫履歴番号の取得に失敗しました。
+MZAB005E=エラー：[MZAB005E] ＣＳＶデータ{0}行目の入庫数が登録できる範囲外の値です。入庫後数量が0～99999になるようにしてください。現在の在庫数は{1}です。
+MZAB006E=エラー：[MZAB006E] ＣＳＶデータ{0}行目の入庫数量が数字ではありません。
+MZAB007E=エラー：[MZAB007E] ＣＳＶデータ{0}行目の入庫日の形式が正しくありません。YYYYMMDD形式で記述してください。
+MZAB008E=エラー：[MZAB008E] ＣＳＶデータ{0}行目の商品コードの形式が正しくありません。半角英数字１０桁（ハイフン）含むで記述してください。
+MZAB009E=エラー：[MZAB009E] ＣＳＶデータ{0}行目の入庫担当者IDが正しい値ではありません。半角英数２０桁以内で記述してください。
+MZAB010E=エラー：[MZAB010E] ＣＳＶデータ{0}行目の備考が正しい値ではありません。全角３０桁以内で記述してください。
+MZAB011E=エラー：[MZAB011E] ＣＳＶデータ{0}行目の商品コードは重複しています。
+MZAB012E=エラー：[MZAB012E] {0}行目の項目数が不正です。
+MZAB013E=エラー：[MZAB013E] エラーは{0}件です。全ての登録を中止しました。(*1:入庫後数量>99,999 *2:商品コードは商品在庫マスタに存在しない *3:DBエラーが発生)
+MZAB014E=エラー：[MZAB014E] 指定されたファイルが不正です。
+
+# 出荷管理
+MZAC201I=ガイド：[MZAC201I] 検索条件を入力してください。
+MZAC202I=ガイド：[MZAC202I] 出荷情報を更新するには、出荷伝票番号をクリックしてください。
+MZAC203I=ガイド：[MZAC203I] 出荷情報を印刷するには、帳票印刷ボタンを押下してください。
+MZAC204I=ガイド：[MZAC204I] 出荷伝票番号{0}の在庫引当、および出荷情報を登録しました。
+MZAC205I=ガイド：[MZAC205I] 出荷伝票番号{0}の在庫引当取消し、および出荷情報を削除しました。
+MZAC206I=ガイド：[MZAC206I] 出荷情報を削除するには、伝票削除ボタンを押下してください。
+MZAC207I=ガイド：[MZAC207I] 出荷情報を{0}します。よろしいですか？
+MZAC208I=ガイド：[MZAC208I] 出荷伝票番号{0}の出荷情報を{1}しました。
+MZAC209I=ガイド：[MZAC209I] 出荷情報を削除します。よろしいですか？
+MZAC210I=ガイド：[MZAC210I] 出荷情報を削除しました。
+MZAC211I=ガイド：[MZAC211I] 出荷情報を削除するには、出荷伝票番号をクリックしてください。
+
+MZAC201E=エラー：[MZAC201E] 出荷伝票番号{0}の明細情報が存在しません。
+MZAC202E=エラー：[MZAC202E] 明細情報は必ず１件登録してください。
+MZAC203E=エラー：[MZAC203E] {0}を設定した場合は、{1}は必須です。
+MZAC204E=エラー：[MZAC204E] {0}の桁数がオーバーしています。
+MZAC205E=エラー：[MZAC205E] 出荷日(to)は出荷日(from)以降の日付でなければなりません。
+MZAC301E=エラー：[MZAC301E] 印刷に失敗しました。管理者に問い合わせてください。
+MZAC302E=エラー：[MZAC302E] {0}が設定されていません。
+MZAC303E=エラー：[MZAC303E] 指定されてた帳票ファイル名が不正です。
+MZAC304E=エラー：[MZAC304E] 指定された帳票ファイルの読み込みに失敗しました。
+MZAC305E=エラー：[MZAC305E] プリンタドライバ(SkyPDF MT Pro for Rakurakuform)が不正です。
+MZAC306E=エラー：[MZAC306E] 指定されたダウンロードファイル格納先が不正です。
+
+
+MZAC101I=ガイド：[MZAC101I] 登録する出荷情報を入力し、登録ボタンを押下してください。
+MZAC102I=ガイド：[MZAC102I] 出荷情報を登録します。よろしいですか？
+MZAC103I=ガイド：[MZAC103I] 出荷情報を削除します。よろしいですか？
+
+MZAC101E=エラー：[MZAC101E] 入力された商品コード"{0}"に該当する商品情報が存在しません。
+MZAC102E=エラー：[MZAC102E] 明細情報は必ず最低１件は登録してください。
+MZAC103E=エラー：[MZAC103E] 出荷伝票番号を取得できませんでした。
+MZAC104E=エラー：[MZAC104E] 明細情報{0}行目の数量が未入力です。
+MZAC105E=エラー：[MZAC105E] 明細情報{0}行目の商品コードが未入力です。
+MZAC106E=エラー：[MZAC106E] 明細情報{0}行目の商品コードが１０桁ではありません。商品コードは半角数字１０桁（ハイフン含む）で入力してください。
+MZAC107E=エラー：[MZAC107E] 入力された商品コード"{0}"の合計金額が上限を超えました。数量を減らしてください。
+MZAC108E=エラー：[MZAC108E] 出荷合計金額の桁数がオーバーしています。
+MZAC109E=エラー：[MZAC109E] 商品コードが重複しています。
+MZAC110E=エラー：[MZAC110E] 明細情報{0}行名の商品コード、数量が未入力です。
+MZAC111E=エラー：[MZAC111E] 数量は０より大きい値を入力して下さい。
+MZAC112E=エラー：[MZAC112E] 在庫引当が完了しませんでした。
+MZAC113E=エラー：[MZAC113E] 在庫引当取消しが完了しませんでした。
+
+MZAC501I=ガイド：[MZAC501I] ＯＫボタンで在庫引当処理を実行します。出荷日から6日以内の出荷情報が引当対象となります。
+MZAC502I=ガイド：[MZAC502I] ＯＫボタンで出荷情報引当画面に戻ります。
+MZAC503I=ガイド：[MZAC503I] 引当は、{0}件全て正常に終了いたしました。
+
+MZAC501E=エラー：[MZAC501E] Oracleシステムエラーが発生したため、引当処理は行われませんでした。
+MZAC502E=エラー：[MZAC502E] 排他エラーが発生したため、引当処理は行われませんでした。
+MZAC503E=エラー：[MZAC503E] 管理者のメール送信情報が取得できなかったため、引当結果通知メールが未送信です。
+MZAC504E=エラー：[MZAC504E] 引当に{0}件成功し、{1}件失敗しました。
+
+############## pj0 screen name.#################################
+
+SZZA0101=SZZA0101：ログイン画面
+SZZA0102=SZZA0102：メニュー画面
+SZZA0103=SZZA0103：システムエラー画面
+SZZA0104=SZZA0104：不正遷移エラー画面
+SZZA0105=SZZA0105：セッションタイムアウト画面
+SZZA0106=SZZA0106：不正アクセスエラー画面
+
+SZAA0111=SZAA0111：商品情報登録画面
+SZAA011C=SZAA011C：商品情報登録確認画面
+SZAA011D=SZAA011D：商品情報登録完了画面
+SZAA0201=SZAA0201：商品情報検索画面
+SZAA0202=SZAA0202：商品情報検索結果一覧画面
+SZAA0211=SZAA0211：商品情報更新画面
+SZAA021C=SZAA021C：商品情報更新確認画面
+SZAA021D=SZAA021D：商品情報更新完了画面
+SZAA022C=SZAA022C：商品情報削除確認画面
+SZAA022D=SZAA022D：商品情報削除完了画面
+
+SZAB0111=SZAB0111：入庫情報一括登録画面
+SZAB011C=SZAB011C：入庫情報一括登録確認画面
+SZAB011D=SZAB011D：入庫情報一括登録完了画面
+
+SZAC0111=SZAC0111：出荷情報登録画面
+SZAC011C=SZAC011C：出荷情報登録・削除確認画面
+SZAC011D=SZAC011D：出荷情報登録・削除完了画面
+SZAC0201=SZAC0201：出荷情報検索画面
+SZAC0202=SZAC0202：出荷情報検索結果一覧画面
+SZAC0211=SZAC0211：出荷情報更新画面
+SZAC021C=SZAC021C：出荷情報更新確認画面
+SZAC021D=SZAC021D：出荷情報更新完了画面
+SZAC022C=SZAC022C：出荷情報削除確認画面
+SZAC022D=SZAC022D：出荷情報削除完了画面
+
+SZAC0501=SZAC0501:出荷情報引当画面
+SZAC050D=SZAC050D:出荷情報引当完了画面
+
+
+############# pj0 common setting property ################################
+#最大検索数
+projectzero.maxsearch=10000
+
+#CSVダウンロード件数制限
+projectzero.download.csv.maxrecord=1000
+
+#CSVダウンロードサイズ制限
+projectzero.download.csv.maxbytesize=1000000
+
+#ダウンロードファイル送付用格納フォルダ
+projectzero.download.file.directory=D:\ProjectZERO\download
+
+#CSVアップロード件数制限
+projectzero.upload.csv.maxrecord=1000
+
+
+############# pj0  unique setting property ################################
+
+#
+projectzero.zac01.detail.count=10
+
+#ダウンロードCSVファイル名
+projectzero.zac01.download.csvfilename=RZAC0101
+
+#ダウンロードPDFファイル名
+projectzero.zac01.download.pdffilename=RZAC0102

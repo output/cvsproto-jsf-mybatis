@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+"-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.2.0//EN"
+"http://jakarta.apache.org/commons/dtds/validator_1_2_0.dtd">
+<form-validation>
+	<global>
+		<!-- 数字 -->
+		<constant>
+			<constant-name>num</constant-name>
+			<constant-value>^[0-9]*$</constant-value>
+		</constant>
+		<!-- アルファベット＋数字 -->
+		<constant>
+			<constant-name>alpnum</constant-name>
+			<constant-value>^[a-zA-Z0-9]*$</constant-value>
+		</constant>
+		<!-- 全角文字 -->
+		<constant>
+			<constant-name>fullsize</constant-name>
+			<constant-value>^[ ]*[^ -~｡-ﾟ]*[ ]*$</constant-value><!-- 半角文字以外 -->
+		</constant>
+		<!-- 半角文字 (欧文) + 改行文字(テキストエリアの場合) -->
+		<constant>
+			<constant-name>halfsize</constant-name>
+			<constant-value>^[ -~\r\n]*$</constant-value>
+		</constant>
+		<!-- 半角カナ + 改行文字(テキストエリアの場合) -->
+		<constant>
+			<constant-name>hkatacana</constant-name>
+			<constant-value>^[｡-ﾟ\r\n]*$</constant-value>
+		</constant>
+		<!-- 半角文字(半角カナを含む) + 改行文字(テキストエリアの場合) -->
+		<constant>
+			<constant-name>halfkana</constant-name>
+			<constant-value>^[ -~｡-ﾟ\r\n]*$</constant-value>
+		</constant>
+		<!-- 全角ｶﾅ (全角カナ) -->
+		<constant>
+			<constant-name>fkatacana</constant-name>
+			<constant-value>^[ァ-ヴー]*$</constant-value>
+		</constant>
+		<!-- 円15桁 （マイナス可、整数15）-->
+		<constant>
+			<constant-name>yen</constant-name>
+			<constant-value>^-?[0-9]{1,15}$</constant-value>
+		</constant>
+		<!-- ドル （マイナス可、整数12桁、少数3桁）-->
+		<constant>
+			<constant-name>dollar</constant-name>
+			<constant-value>^-?[0-9]{1,12}(\.[0-9]{1,3})?$</constant-value>
+		</constant>
+		<!-- 電話番号 -->
+		<constant>
+			<constant-name>phone</constant-name>
+			<constant-value>^[0-9]{3}-[0-9]{3}-[0-9]{4}$</constant-value>
+		</constant>
+		<!-- 郵便番号 -->
+		<constant>
+			<constant-name>zip</constant-name>
+			<constant-value>^[0-9]{3}-?[0-9]{4}$</constant-value>
+		</constant>
+	</global>
+	<formset>
+		<form name="SZAB0111">
+			<field property="upload" depends="required">
+				<msg name="required" key="errors.required" />
+				<arg position="0" key="ファイル名" resource="false" />
+			</field>
+      <field property="username" depends="required">
+        <msg name="required" key="errors.required"/>
+        <arg position="0" key="账号" resource="false" />
+      </field>
+      <field property="password" depends="required">
+        <msg name="required" key="errors.required"/>
+        <arg position="0" key="密码" resource="false" />
+      </field>
+		</form>
+    
+		<form name="SZAA0111">
+			<field property="productCd1" depends="required,mask,minlength">
+				<msg name="required" key="errors.required" />
+				<msg name="mask" key="errors.alphaNumeric" />
+				<msg name="minlength" key="errors.length" />
+				<arg position="0" key="商品コード上３桁" resource="false" />
+			    <var>
+					<var-name>mask</var-name>
+			     	<var-value>${alpnum}</var-value>
+			    </var>
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>3</var-value>
+				</var>
+			</field>
+			<field property="productCd2" depends="required,mask,minlength">
+				<msg name="required" key="errors.required" />
+				<msg name="mask" key="errors.alphaNumeric" />
+				<msg name="minlength" key="errors.length" />
+				<arg position="0" key="商品コード下６桁" resource="false" />
+			    <var>
+					<var-name>mask</var-name>
+			     	<var-value>${alpnum}</var-value>
+			    </var>
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>6</var-value>
+				</var>
+			</field>
+			<field property="productNm" depends="required,mask,maxlength">
+				<msg name="required" key="errors.required" />
+				<msg name="mask" key="errors.charByteSize" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="商品名" resource="false" />
+			    <var>
+					<var-name>mask</var-name>
+			     	<var-value>${fullsize}</var-value>
+			    </var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="productKnNm" depends="mask,maxlength">
+				<msg name="mask" key="errors.zenkakuKana" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="商品名カナ" resource="false" />
+			    <var>
+					<var-name>mask</var-name>
+			     	<var-value>${fkatacana}</var-value>
+			    </var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="productKbnList" depends="required">
+				<msg name="required" key="errors.required" />
+				<arg position="0" key="商品区分" resource="false" />
+			</field>
+			<field property="price" depends="required,maxlength,mask">
+				<msg name="required" key="errors.required" />
+				<msg name="maxlength" key="errors.digits" />
+				<msg name="mask" key="errors.numeric" />
+				<arg position="0" key="単価" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>8</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${num}</var-value>
+				</var>
+			</field>
+			<field property="quantity" depends="required,maxlength,mask">
+				<msg name="required" key="errors.required" />
+				<msg name="maxlength" key="errors.digits" />
+				<msg name="mask" key="errors.numeric" />
+				<arg position="0" key="在庫数" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${num}</var-value>
+				</var>
+			</field>
+			<field property="remarks" depends="mask,maxlength">
+				<msg name="mask" key="errors.charByteSize" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="備考" resource="false" />
+			    <var>
+					<var-name>mask</var-name>
+			     	<var-value>${fullsize}</var-value>
+			    </var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+		</form>		
+		<form name="SZAA0202">
+			<field property="selected" depends="required">
+			<msg name="required" key="MZAA004E" />						
+			</field>
+		</form>
+		<form name="SZAA0211">
+			<field property="productNm" depends="required,mask,maxlength">
+				<msg name="required" key="errors.required" />
+				<msg name="mask" key="errors.charByteSize" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="商品名" resource="false" />
+			    <var>
+					<var-name>mask</var-name>
+			     	<var-value>${fullsize}</var-value>
+			    </var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="productKnNm" depends="mask,maxlength">
+				<msg name="mask" key="errors.zenkakuKana" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="商品名カナ" resource="false" />
+			    <var>
+					<var-name>mask</var-name>
+			     	<var-value>${fkatacana}</var-value>
+			    </var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+			<field property="productKbn" depends="required">
+				<msg name="required" key="errors.required" />
+				<arg position="0" key="商品区分" resource="false" />
+			</field>
+			<field property="price" depends="required,maxlength,mask">
+				<msg name="required" key="errors.required" />
+				<msg name="maxlength" key="errors.digits" />
+				<msg name="mask" key="errors.numeric" />
+				<arg position="0" key="単価" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>8</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${num}</var-value>
+				</var>
+			</field>
+			<field property="quantity" depends="required,maxlength,mask">
+				<msg name="required" key="errors.required" />
+				<msg name="maxlength" key="errors.digits" />
+				<msg name="mask" key="errors.numeric" />
+				<arg position="0" key="在庫数" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>5</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${num}</var-value>
+				</var>
+			</field>
+			<field property="remarks" depends="required,mask,maxlength">
+				<msg name="required" key="errors.required" />
+				<msg name="mask" key="errors.charByteSize" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="備考" resource="false" />
+			    <var>
+					<var-name>mask</var-name>
+			     	<var-value>${fullsize}</var-value>
+			    </var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+		</form>
+		<form name="SZAC0111">
+ 			<field property="shipToNmUp" depends="required,mask,maxlength">
+				<msg name="required" key="errors.required" />
+				<msg name="mask" key="errors.charByteSize" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="出荷先名" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+			     	<var-value>${fullsize}</var-value>			     	
+			    </var>
+			    <var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<field property="shipToDepNmUp" depends="required,mask,maxlength">
+				<msg name="required" key="errors.required" />
+				<msg name="mask" key="errors.charByteSize" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="出荷先部署名" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+			     	<var-value>${fullsize}</var-value>
+			    </var>
+			    <var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+			<field property="shipToUserNmUp" depends="required,maxlength,mask">
+				<msg name="required" key="errors.required" />
+				<msg name="mask" key="errors.charByteSize" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="出荷先担当者名" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+			     	<var-value>${fullsize}</var-value>
+			    </var>
+			    <var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="shipToZipCdUp" depends="required,mask">
+				<msg name="required" key="errors.required" />
+				<msg name="mask" key="errors.postalCode"/>
+				<arg position="0" key="出荷先郵便番号" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+			     	<var-value>${zip}</var-value>
+			    </var>
+			</field>
+			<field property="shipToAddress1Up" depends="required,mask,maxlength">
+				<msg name="required" key="errors.required" />
+				<msg name="mask" key="errors.charByteSize" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="出荷先住所１" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+			     	<var-value>${fullsize}</var-value>
+			    </var>
+			     <var>
+					<var-name>maxlength</var-name>
+					<var-value>25</var-value>
+				</var>
+			</field>
+			<field property="shipToAddress2Up" depends="mask,maxlength">
+				<msg name="mask" key="errors.charByteSize" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="出荷先住所２" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+			     	<var-value>${fullsize}</var-value>
+			    </var>
+			    <var>
+					<var-name>maxlength</var-name>
+					<var-value>25</var-value>
+				</var>
+			</field>
+			<field property="shipToTelUp" depends="required,mask">
+				<msg name="required" key="errors.required" />
+				<msg name="mask" key="errors.phoneNumber"/>
+				<arg position="0" key="出荷先電話番号" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+			     	<var-value>${phone}</var-value>
+			    </var>
+			</field>
+			<field property="remarksUp" depends="mask,maxlength">
+				<msg name="mask" key="errors.charByteSize" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="備考(ヘッダ情報)" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+			     	<var-value>${fullsize}</var-value>
+			    </var>
+			    <var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+		</form>
+		<form name="SZAC0201">
+			<field property="shipSlipId" depends="mask">
+				<msg name="mask" key="errors.numeric" />
+				<arg position="0" key="出荷伝票番号" resource="false" />
+				<var>
+			        <var-name>mask</var-name>
+			        <var-value>${num}</var-value>
+		        </var>
+			</field>
+			<field property="shipToNm" depends="mask">
+				<msg name="mask" key="errors.charByteSize" />
+				<msg name="maxlength" key="errors.stringLength" />
+				<arg position="0" key="出荷先名" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+			     	<var-value>${fullsize}</var-value>
+			    </var>
+			    <var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+			</field>
+		</form>
+	</formset>
+</form-validation>
