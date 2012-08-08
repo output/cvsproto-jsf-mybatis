@@ -1,0 +1,345 @@
+/*==================== sde標準スタイル ====================*/
+/* テーブルヘッダ */
+tr.row_title {
+	background-color:#66aa99;
+	color:black;
+	font-weight:bold;
+	font-style:normal;
+	font-size:10pt;
+	text-align:center;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+td.column_title {
+	background-color:#66aa99;
+	color:black;
+	font-weight:bold;
+	font-style:normal;
+	font-size:10pt;
+	text-align:center;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* テーブル奇数行 */
+tr.row_odd {
+	background-color:#bfefdf;
+	color:black;
+	font-weight:normal;
+	font-style:normal;
+	font-size:10pt;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* テーブル偶数行 */
+tr.row_even {
+	background-color:#ffffe0;
+	color:black;
+	font-weight:normal;
+	font-style:normal;
+	font-size:10pt;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 入力域(文字列) */
+input.char {
+	background-color:#ffffd0;
+	font-size:10pt;
+	text-align:left;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 入力域(文字列、背景色が薄青色) */
+input.char_blue {
+	background-color:#87cefa;
+	font-size:10pt;
+	text-align:left;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 入力域(文字列、背景色が白色) */
+input.char_white {
+	background-color:#ffffff;
+	font-size:10pt;
+	text-align:left;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 入力域エラー(文字列) */
+input.char_err {
+	background-color:yellow;
+	font-size:10pt;
+	text-align:left;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 入力域(数値) */
+input.number {
+	background-color:#ffffd0;
+	font-size:10pt;
+	text-align:right;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 入力域(数値、背景色が薄青色) */
+input.number_blue {
+	background-color:#87cefa;
+	font-size:10pt;
+	text-align:right;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 入力域(数値、背景色が白色) */
+input.number_white {
+	background-color:#ffffff;
+	font-size:10pt;
+	text-align:right;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 入力域エラー(数値) */
+input.number_err {
+	background-color:yellow;
+	font-size:10pt;
+	text-align:right;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 入力域(文字列) */
+select.char {
+	background-color:#ffffd0;
+	font-size:10pt;
+	text-align:left;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 入力域エラー(文字列) */
+select.char_err {
+	background-color:yellow;
+	font-size:10pt;
+	text-align:left;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 入力域(数値) */
+select.number {
+	background-color:#ffffd0;
+	font-size:10pt;
+	text-align:right;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 入力域エラー(数値) */
+select.number_err {
+	background-color:yellow;
+	font-size:10pt;
+	text-align:right;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 標準テキスト */
+.default {
+	background-color:#fafaff;
+	color:black;
+	font-size:10pt;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 画面タイトル */
+.title_main {
+	background-color:#000080;
+	color:white;
+	font-weight:bold;
+	font-size:12pt;
+	text-align:center;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* サブタイトル */
+.title_sub {
+	background-color:teal;
+	color:white;
+	font-weight:bold;
+	font-size:12pt;
+	text-align:center;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* サブサブタイトル */
+.title_sub2 {
+	background-color:#ff3333;
+	color:white;
+	font-weight:bold;
+	font-size:12pt;
+	text-align:center;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+
+/* 文字列 */
+.char	{
+	font-weight:normal;
+	font-style:normal;
+	font-size:10pt;
+	text-align:left;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 文字列(右寄せ) */
+.char_right	{
+	font-weight:normal;
+	font-style:normal;
+	font-size:10pt;
+	text-align:right;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 文字列(中央揃え) */
+.char_center	{
+	font-weight:normal;
+	font-style:normal;
+	font-size:10pt;
+	text-align:center;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 文字列(太字) */
+.char_b	{
+	font-weight:bold;
+	font-style:normal;
+	font-size:10pt;
+	text-align:left;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 文字列(太字/中央揃え) */
+.char_b_center	{
+	font-weight:bold;
+	font-style:normal;
+	font-size:10pt;
+	text-align:center;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 文字列(太字/右寄せ) */
+.char_b_right	{
+	font-weight:bold;
+	font-style:normal;
+	font-size:10pt;
+	text-align:right;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 文字列(太字/左寄せ) */
+.char_b_left	{
+	font-weight:bold;
+	font-style:normal;
+	font-size:10pt;
+	text-align:left;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 文字列(イタリック体) */
+.char_i	{
+	font-weight:normal;
+	font-style:italic;
+
+	font-size:10pt;
+	text-align:left;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 文字列(太字・イタリック体) */
+.char_b_i	{
+	font-weight:bold;
+	font-style:italic;
+	font-size:10pt;
+	text-align:left;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 数値表示 */
+.number	{
+	font-weight:normal;
+	font-style:normal;
+	font-size:10pt;
+	text-align:right;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* エラーメッセージ */
+.char_err {
+	color:red;
+	font-weight:bold;
+	font-style:normal;
+	font-size:13pt;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 必須項目 */
+.necessary {
+	color:blue;
+	font-weight:bold;
+	font-style:normal;
+	font-size:10pt;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+
+/* 条件つき必須項目 */
+.necessary2 {
+	color:black;
+	font-weight:bold;
+	font-style:normal;
+	font-size:10pt;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* 任意項目 */
+.optional {
+	color:black;
+	font-weight:bold;
+	font-style:normal;
+	font-size:10pt;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+
+/* ラベル */
+.label {
+	color:black;
+	font-weight:bold;
+	font-style:normal;
+	font-size:10pt;
+	font-family:"ＭＳ ゴシック",Arial;
+}
+/*==================== メニューリファレンスアプリケーション用スタイル ====================*/
+/** メニュー領域 **/
+div#menu {
+    position : absolute;
+    top:0px;
+    left:0px;
+    width: 260px;
+    height: 490px;
+	overflow: auto;
+	padding:10px
+
+}
+div#info {
+	position:absolute;
+    top:0px;
+    left:260px;
+    width: 740px;
+    height: 490px;
+	color : #000000;
+	overflow: auto;
+	padding:10px;
+
+}
+
+
+
+
+
+
+
+
+

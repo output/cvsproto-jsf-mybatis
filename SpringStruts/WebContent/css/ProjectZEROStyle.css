@@ -1,0 +1,564 @@
+@charset "Shift_JIS"
+/* -----------------------------------------------------------------------
+ *
+ * Copyright 2005-2007 NEC Corporation. All Rights Reserved
+ *
+ * -------------------------------------------------------------------- */
+
+/* =======================================================================
+ * システム名       : ProjectZERO
+ * サブシステム名   : ZZZ01
+ * ファイル名       : $RCSfile: ProjectZEROStyle.css,v $
+ * 概要             : 共通スタイルシート
+ * ==================================================================== */
+
+/** 共通 **********************************************************************/
+
+/* 標準テキスト */
+.default {
+    background-color : #E0E0E0;
+}
+
+
+/** ヘッダー領域 **/
+#header {
+    position:absolute;
+    top:10px;
+    width: 1000px;
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #8088FF;
+    font-family : "ＭＳ ゴシック", "Arial";
+
+}
+
+/** メイン領域 **/
+#main {
+    position:absolute;
+    top:70px;
+    width: 1000px;
+    height: 540px;
+    color : #000000;
+    font-weight : normal;
+    font-style : normal;
+    font-size : 10pt;
+    font-family : "ＭＳ ゴシック", "Arial";
+    overflow: auto;
+}
+
+/** メイン領域: アップロード情報一覧表示用**/
+#main2 {
+    position:absolute;
+    top:20px;
+    width: 1000px;
+    height: 444px;
+    color : #000000;
+    font-weight : normal;
+    font-style : normal;
+    font-size : 10pt;
+    font-family : "ＭＳ ゴシック", "Arial";
+    overflow: auto;
+}
+
+/** フッター領域 **/
+#footer {
+    position:absolute;
+    top:670px;
+    width: 1000px;
+    height: 30px;
+    clear: both;
+    padding: 5px;
+    text-align: right;
+    background-color: #8088FF;
+    font-family : "ＭＳ ゴシック", "Arial";
+}
+
+/** メッセージ領域 **/
+#message {
+ position:absolute;
+ top:620px;
+ height: 50px;
+ width: 1000px;
+ overflow: auto;
+ margin: 0px;
+ padding: 0px;
+ font-family : "ＭＳ ゴシック", "Arial", sans-serif;
+}
+
+
+
+/** ヘッダー領域用 ************************************************************/
+
+/** ヘッダー領域：ヘッダー情報表示用 **/
+table.titletable{
+  position:absolute;
+  top:5px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-width: 0pt;
+  border-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+/** ヘッダー領域：画面名表示用 **/
+td.screenname{
+  color: #FFFFFF;
+  background-color: #000080;
+  font-style: normal;
+  font-weight: bold;
+  font-size : 10pt;
+}
+
+/** ヘッダー領域：ログイン時間表示用 **/
+td.screenitem{
+  font-size : 8pt;
+  font-weight: bold;
+}
+
+
+/** ヘッダー領域：ユーザ名表示用 **/
+td.screenitem_right{
+  font-size : 8pt;
+  font-weight: bold;
+  text-align: right;
+}
+
+/** ヘッダー領域：ナビゲーションバー表示用 **/
+td.naviitem{
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: bold;
+  text-align: left;
+  font-size : 8pt;
+}
+
+/** メッセージ領域領域用 ******************************************************/
+
+/** メッセージ領域用                                                        */
+
+.message_guide{
+    font-weight: bold;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size : 10pt;
+    margin-left: 32px;
+}
+.message_error{
+    font-weight: bold;
+    background-color: #FFFFFF;
+    color: #FF0000;
+    font-size : 10pt;
+    margin-left: 32px;
+}
+
+/** フッター領域用 ************************************************************/
+
+/** 入力部品標準設定:通常ボタン用 input type="submit|reset|button" **/
+input.button{
+  background-color: #F9F3CD;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  height: 20pt;
+  font-size : 10pt;
+  width: 60pt;
+}
+
+/** 入力部品標準設定:サイズ中(70pt)ボタン用 input type="submit|reset|button" **/
+input.button70{
+  background-color: #F9F3CD;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  height: 20pt;
+  font-size : 10pt;
+  width: 70pt;
+}
+
+
+button.button{
+  background-color: #F9F3CD;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  height: 20pt;
+  font-size : 10pt;
+  width: 60pt;
+}
+
+
+/** メイン領域用 **************************************************************/
+
+/** 検索結果一覧用テーブル **/
+tr.select {
+    background-color : #999999;
+    color : #FFFFFF;
+    font-weight : bold;
+    font-style : normal;
+    font-size : 10pt;
+    text-align : center;
+}
+
+/** 検索結果一覧用テーブルヘッダ **/
+tr.row-title {
+    height: 20px;
+    background-color : #666666;
+    color : #FFFFFF;
+    font-weight : bold;
+    font-style : normal;
+    font-size : 10pt;
+    text-align : center;
+}
+
+/** 検索結果一覧用テーブル奇数行 **/
+tr.row-odd {
+    height: 20px;
+    background-color : #BBBBFF;
+    color : black;
+    font-weight : normal;
+    font-style : normal;
+    font-size : 10pt;
+}
+
+/** 検索結果一覧用テーブル偶数行 **/
+tr.row-even {
+    height: 20px;
+    background-color : #CCCCCC;
+    color : black;
+    font-weight : normal;
+    font-style : normal;
+    font-size : 10pt;
+}
+
+/** 検索結果一覧用テーブル:エラー発生項目用追加属性 **/
+tr.error {
+    height: 20px;
+    background-color: #FFFF00;
+    color: #FF0000;
+    font-weight : normal;
+    font-style : normal;
+    font-size : 10pt;
+}
+
+input.pagenext{
+    background-color: #F9F3CD;
+    font-weight : bold;
+}
+input.pageprev{
+    background-color: #F9F3CD;
+    font-weight : bold;
+}
+input.page{
+    background-color : #F9F3CD;
+}
+.totalcount{
+    font-weight : bold;
+}
+
+/******************************************************************************/
+
+/** 入力部品標準設定:文字入力 input type="text" */
+input.text{
+  background-color: #F9F3CD;
+  font-family: "ＭＳ ゴシック";
+  font-style: normal;
+  font-weight: normal;
+  font-size : 10pt;
+  text-align: left;
+  ime-mode: inactive;
+}
+
+/** 入力部品標準設定:全角文字入力 input type="text" */
+input.zenkaku{
+  background-color: #F9F3CD;
+  font-family: "ＭＳ ゴシック";
+  font-style: normal;
+  font-weight: normal;
+  font-size : 10pt;
+  text-align: left;
+  ime-mode: active; /* IME フォーカス移動時にオン */
+}
+
+/** 入力部品標準設定:数値(整数部)入力 input type="text" */
+input.number{
+  background-color: #F9F3CD;
+  font-family: "ＭＳ ゴシック";
+  font-style: normal;
+  font-weight: normal;
+  font-size : 10pt;
+  text-align: right;
+  ime-mode: disabled; /* IME 禁止 */
+}
+
+/** 入力部品標準設定:コード入力など input type="text" */
+input.hankakueisuu{
+  background-color: #F9F3CD;
+  font-family: "ＭＳ ゴシック";
+  font-style: normal;
+  font-weight: normal;
+  font-size : 10pt;
+  text-align: left;
+  ime-mode: disabled; /* IME 禁止 */
+}
+
+/** 入力部品標準設定:数値(小数部)入力 input type="text" */
+input.decimal_place{
+  background-color: #F9F3CD;
+  font-family: "ＭＳ ゴシック";
+  font-style: normal;
+  font-weight: normal;
+  font-size : 10pt;
+  text-align: left;
+  ime-mode: disabled; /* IME 禁止 */
+}
+
+/** 入力部品標準設定:数値(小数部)入力 input type="text" */
+input.fraction{
+  background-color: #F9F3CD;
+  font-family: "ＭＳ ゴシック";
+  font-style: normal;
+  font-weight: normal;
+  font-size : 10pt;
+  text-align: left;
+}
+
+/** 入力部品標準設定:エラー発生項目用追加属性 input type="text" */
+input.error{
+  background-color: #FFFF00;
+  color: #FF0000;
+  /**font-weight: bold; */
+  border-style: inset;
+  border-color: #FF0000;
+  /** border-width: 3px; */
+}
+
+
+/** 入力部品標準設定:セレクトボックス select/select */
+select{
+  background-color: #F9F3CD;
+  font-family: "ＭＳ ゴシック";
+  font-style: normal;
+  font-weight: normal;
+  font-size : 10pt;
+  text-align: left;
+}
+
+/* select は select.*{} での selector が有効にならないため、毎回明示的に class を指定する必要がある */
+select.select{
+  background-color: #F9F3CD;
+  font-family: "ＭＳ ゴシック";
+  font-style: normal;
+  font-weight: normal;
+  font-size : 10pt;
+  text-align: left;
+}
+
+select.error{
+  background-color: #FFFF00;
+  color: #FF0000;
+  font-family: "ＭＳ ゴシック";
+  font-style: normal;
+  /**font-weight: bold;*/
+  font-size : 10pt;
+  text-align: left;
+  border-style: solid;
+  border-color: #FF0000;
+}
+
+/** 入力部品標準設定:セレクトボックスエレメント option/option */
+option{
+  background-color: #F9F3CD;
+  font-family: "ＭＳ ゴシック";
+  font-style: normal;
+  font-weight: normal;
+  font-size : 10pt;
+  text-align: left;
+}
+
+option.error{
+  background-color: #FFFF00;
+  /**font-weight: bold;*/
+  font-style: normal;
+  border-style: solid;
+  border-color: #FF0000;
+}
+
+/** 入力部品標準設定:複数行入力 textarea class="textarea" */
+/* textarea は、textarea.*{} での selector が有効にならないため、毎回明示的に class を指定する必要がある */
+textarea.textarea{
+  background-color: #F9F3CD;
+  font-family: "ＭＳ ゴシック";
+  font-style: normal;
+  font-weight: normal;
+  font-size : 10pt;
+  text-align: left;
+}
+
+/** 入力部品標準設定:エラー発生項目用追加属性 textarea class="error" */
+textarea.error{
+  background-color: #FFFF00;
+  color: #FF0000;
+  /**font-weight: bold;*/
+  border-style: inset;
+  border-color: #FF0000;
+  /** border-width: 3px;*/
+}
+
+/** 入力補助用のコメント属性 */
+font.comment{
+  color: #996666;
+  font-family: "ＭＳ ゴシック";
+  font-style: normal;
+  font-weight: normal;
+  font-size : 8pt;
+  text-align: center;
+}
+
+
+/******************************************************************************/
+
+/** 処理中メッセージスタイル */
+table.running {
+  visibility: hidden;
+  z-index: 1000;
+  position: absolute;
+  top: 270px;
+  left: 200px;
+  width: 500px;
+  height: 110px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 26px;
+  color: #333333;
+  border-collapse: collapse;
+  background-color: #CCCCCC;
+  border-top: 3px ridge #FFFFCC;
+  border-right: 3px ridge #111111;
+  border-bottom: 3px ridge #111111;
+  border-left: 3px ridge #FFFFCC
+}
+
+table.running tbody tr td.msgtitle {
+  background-color: #000080;
+  font-size: 5px;
+  height: 20px;
+}
+
+table.running tbody tr td.msgbody {
+  height: 90px;
+}
+
+/******************************************************************************/
+
+/** ヘッダー領域：画面名表示用 **/
+td.itemkey{
+  background-color : #666666;
+  color : #FFFFFF;
+  font-weight : bold;
+  font-style : normal;
+  font-size : 10pt;
+  text-align : center;
+}
+
+td.itemvalue{
+  font-style : normal;
+  font-size : 10pt;
+}
+
+td.menugr{
+  font-weight : bold;
+  color : #191970;
+  font-style : normal;
+  font-size : 12pt;
+}
+
+td.menufolder{
+  font-weight : bold;
+  color : #000000;
+  font-style : normal;
+  font-size : 12pt;
+}
+
+.bMenu a:link{
+    COLOR:#57221b;
+    font-style : normal;
+    font-size : 12pt;
+}
+.bMenu a:visited{
+    COLOR:#57221b;
+    font-style : normal;
+    font-size : 12pt;
+}
+
+.bMenu a:active{
+    COLOR:#FF0000;
+    font-style : normal;
+    font-size : 12pt;
+}
+
+input.menu{
+  background-color: #B0C4DE;
+  color:#333366;
+  border-top: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  height: 20pt;
+  font-size : 10pt;
+  width: 150pt;
+}
+
+/** ページ遷移部品用 **/
+.pagelink{
+    COLOR:#000000;
+    font-size : 10pt;
+    font-weight : bold;
+    text-align: right;
+}
+/* =======================================================================
+ * 改版履歴 :
+ * Rev - Date ------- Name --------- Note --------------------------------
+ * 1.0   2007/03/31   NEC            新規作成
+ * ==================================================================== */
+
+
+
+/**----マージ↓----------------------------------------------**/
+/******************************************************************************/
+/** 追加 **/
+
+/* 必須項目 */
+.necessary {
+    color:blue;
+    font-weight:bold;
+    font-style:normal;
+    font-size:10pt;
+    font-family:"ＭＳ ゴシック",Arial;
+}
+
+.readonly {
+	background-color: #EFEFEF;
+	border-width: 0px;
+	font-family: "ＭＳ ゴシック";
+	font-style: normal;
+	font-weight: normal;
+	font-size : 10pt;
+	text-align: left;
+}
+
+.readonly_right {
+	background-color: #EFEFEF;
+	border-width: 0px;
+	font-family: "ＭＳ ゴシック";
+	font-style: normal;
+	font-weight: normal;
+	font-size : 10pt;
+	text-align: right;
+}
+
+.display{display:none;}

@@ -1,0 +1,29 @@
+<%@ page import="org.apache.struts.Globals" %>
+<%@ page import="org.apache.struts.action.ActionMessages" %>
+<%@ page contentType="text/html; charset=UTF-8"%>
+
+<div id="header">
+  <table class="titletable" border="0">
+    <tr>
+        <td rowspan="2">
+            <img src="image/logov2.gif" alt="ProjectZERO" />
+        </td>
+    <td width="600" rowspan="2" class="screenname"><bean:message key="${screenId}"/></td>
+        <td width="75" class="screenitem">&nbsp;</td>
+        <td width="75" class="screenitem">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="screenitem" colspan="2">ユーザhnnc</td>
+    </tr>
+    <tr>
+        <td class="screenitem" colspan="2">&nbsp;</td>
+        
+        <td width=75 class="screenitem">
+          <a href="/ProjectZERO">メニューへ </a>
+        </td>
+        <td width=75 class="screenitem">
+          <a href="/ProjectZERO" onclick="window.opener=window;window.self.close();">ログアウト</a>
+        </td>
+    </tr>
+  </table>
+</div>
