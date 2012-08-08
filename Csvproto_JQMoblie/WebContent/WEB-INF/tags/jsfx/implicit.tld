@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+        http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>2.5</tlib-version>
+    <short-name>jsfx</short-name>
+
+    <!--
+        タグファイルで JSP 2.1 の機能を使用する場合は
+        implicit.tld ファイルを作成し、
+        taglib 要素の version 属性に "2.1" を指定する必要がある。
+        implicit.tld がない場合は対象バージョンは "2.0" となり、
+        JSP 2.1 の機能("#{～}"の式を指定できる属性など)
+        が使用できない。
+    -->
+
+</taglib>
