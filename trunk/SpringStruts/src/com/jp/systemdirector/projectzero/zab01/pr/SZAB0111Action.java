@@ -557,7 +557,7 @@ public class SZAB0111Action extends EventDispatchAction {
         } else {
             errors.add(ActionMessages.GLOBAL_MESSAGE, new ActionMessage(
                     "MZAB009E", 11));
-
+            request.setAttribute(Globals.ERROR_KEY, errors);
             forward = map.findForward("error");
         }
 
