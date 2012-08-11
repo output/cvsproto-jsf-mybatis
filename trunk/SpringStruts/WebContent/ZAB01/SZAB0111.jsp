@@ -13,6 +13,7 @@
 <%-- ********** Generated section end ********** --%>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><bean:message key="SZAB0111" /></title>
 <link href="css/ProjectZEROStyle.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
