@@ -115,8 +115,7 @@ public class SZAB0111Action extends EventDispatchAction {
 
         if (!bean_select.checkUserInfo(context, null)) {
             errors.add(ActionMessages.GLOBAL_MESSAGE, new ActionMessage(
-                    "MZAB009E", 11));
-
+                    "MWKL002E"));
         }
 
         org.apache.struts.upload.FormFile imgFile = context.getUpload();
@@ -124,7 +123,7 @@ public class SZAB0111Action extends EventDispatchAction {
 
         if (new File(outputFileName).exists()) {
             errors.add(ActionMessages.GLOBAL_MESSAGE, new ActionMessage(
-                    "MZAB009E", "    exists   "));
+                    "MWKL001E", imgFile.getFileName()));
         } else {
             InputStream is = imgFile.getInputStream();
             FileOutputStream fos = new FileOutputStream(outputFileName);
