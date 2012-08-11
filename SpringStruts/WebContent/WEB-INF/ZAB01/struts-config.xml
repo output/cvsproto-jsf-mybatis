@@ -18,7 +18,7 @@
       <forward name="Clear" path="/ZAB01/SZAB0111.jsp"/>
       <forward name="ToUpdate" path="/ZAB01/SZAB011C.jsp"/>
       <forward name="unspecified" path="/ZAB01/SZAB0111.jsp"/>
-      <forward name="error" path="/ZAB01/SZABERR.jsp"/>
+      <forward name="error" path="/ZAB01/SZAB0111.jsp"/>
       <forward name="right" path="/ZAB01/SZABOK.jsp"/>
     </action>
     <action name="SZAB011C" parameter="updInpOk,updInpBack" path="/SZAB011C" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB011CAction">

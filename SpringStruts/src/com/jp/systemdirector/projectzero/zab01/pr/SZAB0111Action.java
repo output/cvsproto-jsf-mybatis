@@ -10,37 +10,33 @@
 
 package com.jp.systemdirector.projectzero.zab01.pr;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.validator.DateValidator;
 import org.apache.log4j.Logger;
 import org.apache.struts.Globals;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
-
-import org.apache.struts.action.ActionMapping;
 import org.apache.struts.actions.EventDispatchAction;
 
 import com.jp.systemdirector.projectzero.zab01.ap.data.ContextData;
 import com.jp.systemdirector.projectzero.zab01.ap.data.SZAB0111SelectResultData;
 import com.jp.systemdirector.projectzero.zab01.ap.logicbean.ISZAB0111SelectLogicBean;
-import com.jp.systemdirector.projectzero.zab01.pr.SZAB011CForm;
-import com.jp.systemdirector.projectzero.zab01.pr.SZAB011CStockInfoRegConfirmBean;
-import com.jp.systemdirector.projectzero.zab01.pr.SZAB0111Form;
 import com.nec.jp.sdeparts.util.csv.CSVReader;
-
-import javax.servlet.http.*;
-import java.io.*;
-import java.math.BigDecimal;
 
 /**
  * 画面 com.jp.systemdirector.projectzero.zab01.pr.SZAB0111Action に対するアクションクラス。
@@ -68,7 +64,7 @@ public class SZAB0111Action extends EventDispatchAction {
 
     static Logger log = Logger.getLogger(SZAB0111Action.class.getName());
 
-    @Resource(name = "SZAB0111Select")
+    // @Resource(name = "SZAB0111Select")
     private ISZAB0111SelectLogicBean bean_select;
 
     public ISZAB0111SelectLogicBean getBean_select() {
@@ -542,8 +538,11 @@ public class SZAB0111Action extends EventDispatchAction {
         context.setUsername(prevForm.getUsername());
         context.setPassword(prevForm.getPassword());
 
+        log.debug("checkUser:\n" + "username: " + prevForm.getUsername() + "\n"
+                + "password: " + prevForm.getPassword());
+
         log.debug("checkUser:\n" + "username: "
-                + new String(prevForm.getUsername().getBytes(), "GBK") + "\n"
+                + new String(prevForm.getUsername().getBytes(), "UTF-8") + "\n"
                 + "password: " + prevForm.getPassword());
 
         // if (prevForm.getUsername().equals("wkl") &&
@@ -556,6 +555,9 @@ public class SZAB0111Action extends EventDispatchAction {
         if (bean_select.checkUserInfo(context, null)) {
             forward = map.findForward("right");
         } else {
+            errors.add(ActionMessages.GLOBAL_MESSAGE, new ActionMessage(
+                    "MZAB009E", 11));
+
             forward = map.findForward("error");
         }
 
