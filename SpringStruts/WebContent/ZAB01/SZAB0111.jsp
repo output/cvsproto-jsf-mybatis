@@ -20,6 +20,7 @@
 
       function comSubmit(action) {
         var url = "<%=request.getContextPath()%>" + action;
+        alert(url);
         document.forms[0].action = url;
         document.forms[0].submit();
         return true;
