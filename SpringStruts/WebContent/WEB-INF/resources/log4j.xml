@@ -12,7 +12,7 @@
 	</appender>	
 
 	<appender name="INFO" class="org.apache.log4j.FileAppender">
-	  <param name="File" value="/logs/ProjectZERO/application.log" />
+	  <param name="File" value="/logs/SpringStruts/application.log" />
 	  <layout class="org.apache.log4j.PatternLayout">
 	    <param name="ConversionPattern"
 	           value="%d{yyyy/mm/dd} %p:%r:%c:%m%n" />
@@ -23,7 +23,7 @@
 	<appender name="ERROR"
 		class="org.apache.log4j.DailyRollingFileAppender">
 		<param name="Threshold" value="error" />
-		<param name="File" value="/logs/ProjectZERO/error.log" />
+		<param name="File" value="/logs/SpringStruts/error.log" />
 		<param name="Append" value="true" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
@@ -35,7 +35,7 @@
 	<appender name="DEBUG"
 		class="org.apache.log4j.DailyRollingFileAppender">
 		<param name="Threshold" value="debug" />
-		<param name="File" value="/logs/ProjectZERO/debug.log" />
+		<param name="File" value="/logs/SpringStruts/debug.log" />
 		<param name="Append" value="true" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
