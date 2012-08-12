@@ -19,7 +19,7 @@
 	  <table class="titletable" border="0">
 	    <tr>
 	        <td rowspan="2">
-	            <img src="image/logov2.gif" alt="ProjectZERO" />
+	            <img src="image/logov2.gif" alt="SpringStruts" />
 	        </td>
 			<td width="600" rowspan="2" class="screenname">SZZA0102：メニュー画面</td>
 	        <td width="75" class="screenitem">&nbsp;</td>
@@ -32,10 +32,10 @@
 	        <td class="screenitem" colspan="2">&nbsp;</td>
 	        
 	        <td width=75 class="screenitem">
-	        	<a href="/ProjectZERO">メニューへ </a>
+	        	<a href="/SpringStruts">メニューへ </a>
 	        </td>
 	        <td width=75 class="screenitem">
-	        	<a href="/ProjectZERO" onclick="window.opener=window;window.self.close();">ログアウト</a>
+	        	<a href="/SpringStruts" onclick="window.opener=window;window.self.close();">ログアウト</a>
 	        </td>
 	    </tr>
 	  </table>
@@ -59,7 +59,7 @@
 					<td style="padding-left:25px;background-color: #CBFFC8;text-align: left;color: #6ABA43;">
 						<a href=" <%=request.getContextPath()%>/SZAA0111Init.do ">■商品情報新規登録</a>
 					</td>
-				</tr>
+                </tr>
 				<tr>
 					<td style="padding-left:25px;background-color: #CBFFC8;text-align: left;color: #6ABA43;">
 						<a href=" <%=request.getContextPath()%>/SZAB0111Init.do ">■入庫情報一括登録</a>
