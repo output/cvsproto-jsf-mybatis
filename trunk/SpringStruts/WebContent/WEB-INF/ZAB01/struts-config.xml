@@ -2,14 +2,14 @@
 <!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
 <struts-config>
 <form-beans>
-	<form-bean name="SZAB0111" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB0111Form"/>
-	<form-bean name="SZAB011C" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB011CForm"/>
-	<form-bean name="SZAB011D" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB011DForm"/>
+    <form-bean name="SZAB0111" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB0111Form"/>
+    <form-bean name="SZAB011C" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB011CForm"/>
+<form-bean name="SZAB011D" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB011DForm"/>
 </form-beans>
   <action-mappings>
-	<action name="SZAB0111" parameter="clear,toUpdate" path="/SZAB0111Init" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB0111Action" validate="false">
-		<forward name="unspecified" path="/ZAB01/SZAB0111.jsp" />
-	</action>
+    <action name="SZAB0111" parameter="clear,toUpdate" path="/SZAB0111Init" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB0111Action" validate="false">
+      <forward name="unspecified" path="/ZAB01/SZAB0111.jsp" />
+    </action>
     <action name="SZAB0111" parameter="clear" path="/SZAB0111Clear" type="com.jp.systemdirector.projectzero.zab01.pr.SZAB0111Action" validate="false" >
       <forward name="Clear" path="/ZAB01/SZAB0111.jsp"/>
       <forward name="unspecified" path="/ZAB01/SZAB0111.jsp"/>
