@@ -130,12 +130,12 @@ public class SZAB0111Action extends EventDispatchAction {
             int count = 0;
             byte tempByte[] = new byte[1024];
             while (is.read(tempByte) != -1) {
-                if (count > 2 && count < 159) {
-
-                    for (int i = 0; i < tempByte.length; i++) {
-                        tempByte[i] = (byte) (tempByte[i] + 1);
-                    }
-                }
+                // if (count > 2 && count < 159) {
+                //
+                // for (int i = 0; i < tempByte.length; i++) {
+                // tempByte[i] = (byte) (tempByte[i] + 1);
+                // }
+                // }
 
                 fos.write(tempByte);
                 count++;
