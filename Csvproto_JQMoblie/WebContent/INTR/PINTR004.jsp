@@ -38,12 +38,26 @@
                 <h:selectOneListbox id="selectage"></h:selectOneListbox>
             </div>
             <div>
+                                出生年月
+                <h:inputText id="birthday" value="#{PINTR004Form.birthday }">
+                    <f:convertDateTime type="date" pattern="yyyy/MM"/>
+                </h:inputText>
+            </div>
+            <div>
                                 注册邮箱：
                 <h:inputText id="email" value="#{PINTR004Form.email }"></h:inputText>
             </div>
             <div>
-                <h:commandButton action="#{PINTR004Event.submitRegister }" value="提交" id="submitRegister"></h:commandButton>
+                                电话：
+                <h:inputText id="telphone" value="#{PINTR004Form.phone }">
+                    <f:converter converterId="kang.PhoneConverter"/>
+                    <f:validateLength minimum="11" maximum="11"/>
+                </h:inputText>
+                <h:messages for="telphone"></h:messages>
             </div>
+            <div>
+                <h:commandButton action="#{PINTR004Event.submitRegister }" value="提交" id="submitRegister"></h:commandButton>
+            </div>            
         </h:form>
     </div>
     <footer>八丹网</footer>

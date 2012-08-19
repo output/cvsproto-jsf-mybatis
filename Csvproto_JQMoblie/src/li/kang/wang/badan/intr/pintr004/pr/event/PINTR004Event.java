@@ -118,6 +118,11 @@ public class PINTR004Event {
         return "";
     }
 
+    /**
+     * 提交注册
+     * 
+     * @return
+     */
     public String submitRegister() {
 
         ContextData contextData = new ContextData();

@@ -90,11 +90,17 @@
   <navigation-rule>
     <description>用户注册</description>
     <display-name>用户注册</display-name>
-    <from-view-id>/INTR/PINTR004.jsp</from-view-id>    
+    <from-view-id>/INTR/PINTR004.jsp</from-view-id>
     <navigation-case>
         <from-outcome>submitRegister</from-outcome>
         <to-view-id>/INTR/PINTR002.jsp</to-view-id>
         <redirect/>
     </navigation-case>
   </navigation-rule>
+  
+  <converter>
+      <converter-id>kang.PhoneConverter</converter-id>
+      <converter-class>li.kang.wang.converters.PhoneConverter</converter-class>      
+  </converter>
+  
 </faces-config>

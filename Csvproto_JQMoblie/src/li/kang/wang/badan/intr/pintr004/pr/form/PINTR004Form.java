@@ -1,5 +1,7 @@
 package li.kang.wang.badan.intr.pintr004.pr.form;
 
+import java.util.Date;
+
 /** PINTR004Form用于存储用户注册信息 */
 public class PINTR004Form {
 
@@ -15,8 +17,14 @@ public class PINTR004Form {
     /** 年龄 */
     private int age;
 
+    /** 出生年月(yyyy/MM) */
+    private Date birthday;
+
     /** 注册邮箱 */
     private String email;
+
+    /** 电话 */
+    private String phone;
 
     /**
      * @return the username
@@ -70,6 +78,35 @@ public class PINTR004Form {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    /**
+     * @return the birthday
+     */
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    /**
+     * @param birthday
+     *            the birthday to set
+     */
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    /**
+     * @return the phone
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * @param phone the phone to set
+     */
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
 }
