@@ -29,16 +29,18 @@
 <div id="loginPanel">
       <h:form id="pintr001Form">
         <c:if test="${PINTR001Form.loginFlag == false }">
-账号:
-<h:inputText id="username" styleClass="inputType" accesskey="u"
-            value="#{PINTR001Form.username }"></h:inputText>
+                     账号:
+          <h:inputText id="username" styleClass="inputType" accesskey="u"
+            value="#{PINTR001Form.username }">
+            </h:inputText>
           <br />
-密码:
-<h:inputSecret id="password" styleClass="inputType" accesskey="p"
+                    密码:
+          <h:inputSecret id="password" styleClass="inputType" accesskey="p"
             value="#{PINTR001Form.password }"></h:inputSecret>
           <br />
           <h:commandButton id="submit" value="提交"
             action="#{PINTR001Event.checkUser }"></h:commandButton>
+          <h:commandButton id="register" value="注册" accesskey="r" action="#{PINTR001Event.registerUser }"></h:commandButton>
         </c:if>
         <c:if test="${PINTR001Form.loginFlag == true  }">
           <h:commandLink id="getUserList" accesskey="u" value="用户列表"
@@ -61,7 +63,7 @@
       </h:form>
       </div>
       <div class="imgFilter">
-        <img src="../image/PINTR001/QQ2012-Wallpaper-White.jpg">
+        <img src="../image/PINTR001/QQ2012-Wallpaper-White.jpg" height="700" width="1364">
       </div>
       
     </div>

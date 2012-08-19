@@ -80,6 +80,9 @@ public class PINTR001Event {
         return "loginError";
     }
 
+    /**
+     * 取得用户列表
+     */
     public String getUserList() {
 
         SelectResultData resultData = null;
@@ -113,5 +116,10 @@ public class PINTR001Event {
     public String changeTheme() {
 
         return "";
+    }
+
+    public String registerUser() {
+
+        return "registerUser";
     }
 }

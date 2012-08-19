@@ -2,7 +2,8 @@
 
 <faces-config xmlns="http://java.sun.com/xml/ns/javaee"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+  http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
   version="2.0">
 
 <!-- Home -->
@@ -52,6 +53,48 @@
       <to-view-id>/INTR/PINTR003.jsp</to-view-id>
       <redirect/>
     </navigation-case>
+    <navigation-case>
+        <from-outcome>registerUser</from-outcome>
+        <to-view-id>/INTR/PINTR004.jsp</to-view-id>
+        <redirect/>
+    </navigation-case>
   </navigation-rule>
-
+  
+  <!-- PINTR004用户注册 -->
+  <managed-bean>
+    <managed-bean-name>PINTR004Form</managed-bean-name>
+    <managed-bean-class>li.kang.wang.badan.intr.pintr004.pr.form.PINTR004Form</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean>
+    <managed-bean-name>PINTR004SelectLogicBean</managed-bean-name>
+    <managed-bean-class>li.kang.wang.badan.intr.pintr004.ap.logicbean.SelectLogicBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean>
+    <managed-bean-name>PINTR004Event</managed-bean-name>
+    <managed-bean-class>li.kang.wang.badan.intr.pintr004.pr.event.PINTR004Event</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    <managed-property>
+      <property-name>pintr004Form</property-name>  <!-- 这是PINTR004Event.java中的属性 -->
+      <property-class>li.kang.wang.badan.intr.pintr004.pr.form.PINTR004Form</property-class>
+      <value>#{PINTR004Form}</value>  <!-- 绑定了PINTR004Form的值,才能取得表单数据 -->
+    </managed-property>
+    <managed-property>
+      <property-name>pintr004SelectLogicBean</property-name>
+      <property-class>li.kang.wang.badan.intr.pintr004.ap.logicbean.ISelectLogicBean</property-class>
+      <value>#{PINTR004SelectLogicBean}</value>
+    </managed-property>
+  </managed-bean>
+  
+  <navigation-rule>
+    <description>用户注册</description>
+    <display-name>用户注册</display-name>
+    <from-view-id>/INTR/PINTR004.jsp</from-view-id>    
+    <navigation-case>
+        <from-outcome>submitRegister</from-outcome>
+        <to-view-id>/INTR/PINTR002.jsp</to-view-id>
+        <redirect/>
+    </navigation-case>
+  </navigation-rule>
 </faces-config>

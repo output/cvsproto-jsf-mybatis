@@ -7,19 +7,19 @@ import li.kang.wang.badan.intr.pintr001.ap.data.ListContextData;
 
 /** PINTR001Form用于存储表单信息 */
 public class PINTR001Form {
-    
+
     /** 账号 */
     private String username;
-    
+
     /** 密码 */
     private String password;
-    
+
     /** 登录标志 */
     private boolean loginFlag;
-    
-    /** DataList */
+
+    /** 用户列表 */
     private List<ListContextData> list = new ArrayList<ListContextData>();
-    
+
     /**
      * @return the username
      */
@@ -28,7 +28,8 @@ public class PINTR001Form {
     }
 
     /**
-     * @param username the username to set
+     * @param username
+     *            the username to set
      */
     public void setUsername(String username) {
         this.username = username;
@@ -42,7 +43,8 @@ public class PINTR001Form {
     }
 
     /**
-     * @param password the password to set
+     * @param password
+     *            the password to set
      */
     public void setPassword(String password) {
         this.password = password;
@@ -56,7 +58,8 @@ public class PINTR001Form {
     }
 
     /**
-     * @param loginFlag the loginFlag to set
+     * @param loginFlag
+     *            the loginFlag to set
      */
     public void setLoginFlag(boolean loginFlag) {
         this.loginFlag = loginFlag;
@@ -70,7 +73,8 @@ public class PINTR001Form {
     }
 
     /**
-     * @param list the list to set
+     * @param list
+     *            the list to set
      */
     public void setList(List<ListContextData> list) {
         this.list = list;
