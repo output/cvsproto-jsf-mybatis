@@ -12,14 +12,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>用户登录</title>
 <!-- 公共CSS文件 -->
-<link rel="stylesheet" type="text/css"
-  href="../css/common/jquery.alerts.css" id="PINTR001_css" />
+<link rel="stylesheet" type="text/css" href="../css/common/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/common/jquery.alerts.css" />
+<link rel="stylesheet" type="text/css" href="../css/common/pagelayout.css" />
 <!-- 公共JavaScript文件 -->
-<script type="text/javascript"
-  src="../script/common/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../script/common/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="../script/common/jquery.alerts.js"></script>
 <!-- PINTR001 -->
-<link rel="stylesheet" type="text/css" href="../css/INTR/PINTR001.css">
+<link rel="stylesheet" type="text/css" href="../css/INTR/PINTR001.css" id="PINTR001_css" >
 <script type="text/javascript" src="../script/INTR/PINTR001.js"></script>
 </head>
 <body>

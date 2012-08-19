@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+header{
+  width: 100%;
+  background-color:lightblue;
+  font-size: 15px;
+  
+  /** begin 使标题垂直居中对齐 */
+  height:20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /** end   使标题垂直居中对齐 */
+}
+
+footer{
+  width: 100%;
+  background-color:lightblue;
+  font-size: 15px;
+    
+  /** begin 使标题垂直居中对齐 */
+  height:20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /** end   使标题垂直居中对齐 */
+}
+
+html{
+  font-size:11px;
+}

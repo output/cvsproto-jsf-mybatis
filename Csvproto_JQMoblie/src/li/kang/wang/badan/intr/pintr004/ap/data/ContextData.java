@@ -5,6 +5,9 @@ import java.util.Date;
 /** 保存各个页面之间传递的参数和SQL查询的参数 */
 public class ContextData {
 
+    /** 用户Id */
+    private String userId;
+
     /** 注册账号 */
     private String username;
 
@@ -129,6 +132,20 @@ public class ContextData {
      */
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    /**
+     * @return the userId
+     */
+    public String getUserId() {
+        return userId;
+    }
+
+    /**
+     * @param userId the userId to set
+     */
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
 }
