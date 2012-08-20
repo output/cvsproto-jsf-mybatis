@@ -11,6 +11,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>注册账号</title>
+<!-- JQmobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 <!-- 公共CSS文件 -->
 <link rel="stylesheet" type="text/css" href="../css/common/reset.css" />
 <link rel="stylesheet" type="text/css" href="../css/common/jquery.alerts.css" />
@@ -24,8 +29,9 @@
 </head>
 <body>
   <f:view>
-    <header>注册账号</header>
-    <div id="mainDiv">
+  <div data-role="page">
+    <div data-role="header">注册账号</div>
+    <div id="mainDiv" >
         <h:form id="pintr004Form">
             <div>
                                 账号(*)：
@@ -56,7 +62,6 @@
             <div>
                                 注册邮箱：
                 <h:inputText id="email" value="#{PINTR004Form.email }">
-                    <f:converter converterId=""/>
                 </h:inputText><h:messages for="email" showDetail="true" showSummary="false"></h:messages>
             </div>
             <div>
@@ -64,10 +69,8 @@
                 <h:inputText id="telphone" value="#{PINTR004Form.phone }">
                     <f:converter converterId="kang.PhoneConverter" />
                     <f:validateLength minimum="11" maximum="11"/>
-                    <f:convertNumber pattern="#10000000000"/>
-                    
+                    <f:convertNumber pattern="#10000000000"/>                    
                 </h:inputText><h:messages for="telphone" showDetail="true" showSummary="false"></h:messages>
-                
             </div>
             <div>
                 <h:commandButton action="#{PINTR004Event.submitRegister }" value="提交" id="submitRegister"></h:commandButton>
@@ -75,6 +78,7 @@
         </h:form>
     </div>
     <footer>八丹网</footer>
+    </div>
     </f:view>
 </body>
 </html>
