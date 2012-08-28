@@ -58,7 +58,7 @@
                 <h:selectOneListbox id="selectage" size="5" ></h:selectOneListbox>
                  -->
                 <label for="slider-0">年龄：</label>
-                <input type="range" name="selectage2" id="selectage2" value="#{PINTR004Form.age }" min="0" max="100" />
+                <input type="range" name="age" id="age" value="20" min="0" max="100" />
                 <h:messages for="age" showDetail="true" showSummary="false"></h:messages>
             </div>
             <div>

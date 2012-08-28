@@ -54,9 +54,9 @@
       <redirect/>
     </navigation-case>
     <navigation-case>
-        <from-outcome>registerUser</from-outcome>
-        <to-view-id>/INTR/PINTR004.jsp</to-view-id>
-        <redirect/>
+      <from-outcome>registerUser</from-outcome>
+      <to-view-id>/INTR/PINTR004.jsp</to-view-id>
+      <redirect/>
     </navigation-case>
   </navigation-rule>
   
@@ -92,8 +92,8 @@
     <display-name>用户注册</display-name>
     <from-view-id>/INTR/PINTR004.jsp</from-view-id>
     <navigation-case>
-        <from-outcome>submitRegister</from-outcome>
-        <to-view-id>/INTR/PINTR002.jsp</to-view-id>
+      <from-outcome>submitRegister</from-outcome>
+      <to-view-id>/INTR/PINTR002.jsp</to-view-id>
         <redirect/>
     </navigation-case>
   </navigation-rule>

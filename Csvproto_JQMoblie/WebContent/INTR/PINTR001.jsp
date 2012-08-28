@@ -66,14 +66,14 @@
             </c:forEach>
           </table>
           </c:if>
-        </c:if>        
+        </c:if>
         <br/>
       <h:commandButton value="切换主题" onclick="return changeTheme()" ></h:commandButton>
       </h:form>
       </div>
       <div class="imgFilter">
         <img src="../image/PINTR001/QQ2012-Wallpaper-White.jpg" height="700" width="1364">
-      </div>      
+      </div>
     </div>
     </div>
   </f:view>
