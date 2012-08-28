@@ -1,4 +1,3 @@
-
 package li.kang.wang.badan.common;
 
 import java.io.IOException;
@@ -48,6 +47,7 @@ public class SqlConfig {
 
     /**
      * SqlMap实例取得
+     * 
      * @return SqlMapClient
      */
     public static SqlMapClient getSqlMapInstance() {

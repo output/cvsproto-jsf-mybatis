@@ -4,10 +4,10 @@ package li.kang.wang.badan.intr.pintr001.ap.data;
 public class ListContextData {
     /** ID */
     private int userId;
-    
+
     /** 账号 */
     private String username;
-    
+
     /** 密码 */
     private String password;
 
@@ -19,7 +19,8 @@ public class ListContextData {
     }
 
     /**
-     * @param userId the userId to set
+     * @param userId
+     *            the userId to set
      */
     public void setUserId(int userId) {
         this.userId = userId;
@@ -33,7 +34,8 @@ public class ListContextData {
     }
 
     /**
-     * @param username the username to set
+     * @param username
+     *            the username to set
      */
     public void setUsername(String username) {
         this.username = username;
@@ -47,7 +49,8 @@ public class ListContextData {
     }
 
     /**
-     * @param password the password to set
+     * @param password
+     *            the password to set
      */
     public void setPassword(String password) {
         this.password = password;

@@ -27,7 +27,7 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
        AND 
               password = #password:VARCHAR#
   </select>
-  
+
   <!-- 选择用户信息 -->
   <select
     id="getAllUserInfo"

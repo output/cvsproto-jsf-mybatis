@@ -24,7 +24,7 @@ public class XmlParseUtils {
 
     /**
      * 页面ID取得消息
-     *
+     * 
      * @param String
      *            pageId
      * @return HashMap 消息Map

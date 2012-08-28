@@ -12,23 +12,23 @@ public final class Utils {
 
     /**
      * object转换成数字
-     *
+     * 
      * @param value
-     *           数字字符串
+     *            数字字符串
      * @return BigDecimal型数字
      */
-    public static BigDecimal convertToBigDecimal(Object value ) {
+    public static BigDecimal convertToBigDecimal(Object value) {
         BigDecimal ret = null;
 
-        if( value != null ) {
-            if( value instanceof BigDecimal ) {
+        if (value != null) {
+            if (value instanceof BigDecimal) {
                 ret = (BigDecimal) value;
-            } else if( value instanceof String ) {
-                ret = new BigDecimal( (String) value );
-            } else if( value instanceof BigInteger ) {
-                ret = new BigDecimal( (BigInteger) value );
-            } else if( value instanceof Number ) {
-                ret = new BigDecimal( ((Number)value).doubleValue() );
+            } else if (value instanceof String) {
+                ret = new BigDecimal((String) value);
+            } else if (value instanceof BigInteger) {
+                ret = new BigDecimal((BigInteger) value);
+            } else if (value instanceof Number) {
+                ret = new BigDecimal(((Number) value).doubleValue());
             } else {
                 ret = new BigDecimal("0");
             }
@@ -38,13 +38,14 @@ public final class Utils {
 
     /**
      * object转换成字符串
+     * 
      * @param value
      * @return 字符串
      */
     public static String convertToString(Object value) {
         String ret = "";
 
-        if( value != null ) {
+        if (value != null) {
             ret = String.valueOf(value);
         }
 
@@ -59,8 +60,8 @@ public final class Utils {
      * @param padChar
      * @return
      */
-    public static String PadLeftInHalf(String inData, int totalSize, char padChar)
-    {
+    public static String PadLeftInHalf(String inData, int totalSize,
+            char padChar) {
         return padInHalf(inData, totalSize, padChar, true);
     }
 
@@ -72,8 +73,8 @@ public final class Utils {
      * @param padChar
      * @return
      */
-    public static String PadRightInHalf(String inData, int totalSize, char padChar)
-    {
+    public static String PadRightInHalf(String inData, int totalSize,
+            char padChar) {
         return padInHalf(inData, totalSize, padChar, false);
     }
 
@@ -86,14 +87,14 @@ public final class Utils {
      * @param isPadLeft
      * @return
      */
-    private static String padInHalf(String inData, int totalSize, char padChar, boolean isPadLeft) {
+    private static String padInHalf(String inData, int totalSize, char padChar,
+            boolean isPadLeft) {
 
         String retData = inData;
 
         int deltSize = getDeltSize(inData, totalSize);
 
-        if (deltSize > 0)
-        {
+        if (deltSize > 0) {
             for (int i = 0; i < deltSize; i++) {
                 if (isPadLeft) {
                     retData = padChar + retData;
@@ -108,19 +109,19 @@ public final class Utils {
 
     /**
      * 取得字符串长度差
+     * 
      * @param inData
      * @param totalSize
      * @return
      */
-    private static int getDeltSize(String inData, int totalSize)
-    {
+    private static int getDeltSize(String inData, int totalSize) {
         int dataLen = inData.getBytes().length;
 
         return (totalSize - dataLen);
     }
 
     /**
-     *  删除字符串前后的空格(包括全角和半角)
+     * 删除字符串前后的空格(包括全角和半角)
      */
     public static String delSpace(String str) {
 
@@ -131,13 +132,14 @@ public final class Utils {
         String regStartSpace = "^[�@ ]*";
         String regEndSpace = "[�@ ]*$";
 
-        String strDelSpace = str.replaceAll(regStartSpace, "").replaceAll(regEndSpace, "");
+        String strDelSpace = str.replaceAll(regStartSpace, "").replaceAll(
+                regEndSpace, "");
 
         return strDelSpace;
     }
 
     /**
-     *  删除字符串前后的半角空格
+     * 删除字符串前后的半角空格
      */
     public static String delHalfSpace(String str) {
 

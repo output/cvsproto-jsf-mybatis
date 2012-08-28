@@ -1,4 +1,3 @@
-
 package li.kang.wang.badan.common;
 
 import java.util.Properties;
@@ -19,10 +18,10 @@ public class PropertyFileUtils {
 
     /**
      * 取得公共配置文件项目的值
-     *
+     * 
      * @param String
      *            key
-     * @return String 
+     * @return String
      */
     public String getUserId(String key) {
         String userId = "";
