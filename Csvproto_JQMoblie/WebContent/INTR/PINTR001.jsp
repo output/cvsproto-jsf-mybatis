@@ -11,21 +11,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>用户登录</title>
+<!-- JQmobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 <!-- 公共CSS文件 -->
+<!-- 
 <link rel="stylesheet" type="text/css" href="../css/common/reset.css" />
 <link rel="stylesheet" type="text/css" href="../css/common/jquery.alerts.css" />
 <link rel="stylesheet" type="text/css" href="../css/common/pagelayout.css" />
+ -->
 <!-- 公共JavaScript文件 -->
+<!--
 <script type="text/javascript" src="../script/common/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="../script/common/jquery.alerts.js"></script>
+ -->
 <!-- PINTR001 -->
 <link rel="stylesheet" type="text/css" href="../css/INTR/PINTR001.css" id="PINTR001_css" >
 <script type="text/javascript" src="../script/INTR/PINTR001.js"></script>
 </head>
 <body>
   <f:view>
+  <div data-role="page">
         <%-- JSF的标签要写在<f:view>里面 --%>
-    <div id="MianPanel" class="theme">
+    <div id="MianPanel" class="theme" data-role="content">
 <div id="loginPanel">
       <h:form id="pintr001Form">
         <c:if test="${PINTR001Form.loginFlag == false }">
@@ -47,9 +57,7 @@
             action="#{PINTR001Event.getUserList }"></h:commandLink>
           <h:commandButton id="logout" value="退出登录"
             action="#{PINTR001Event.logOut }"></h:commandButton>
-        </c:if>
-        <br>
-        <c:if test="${not empty PINTR001Form.list }">
+          <c:if test="${not empty PINTR001Form.list }">
           <table class="">
             <c:forEach var="item" items="${PINTR001Form.list }">
               <tr>
@@ -57,15 +65,16 @@
               </tr>
             </c:forEach>
           </table>
-        </c:if>
+          </c:if>
+        </c:if>        
         <br/>
       <h:commandButton value="切换主题" onclick="return changeTheme()" ></h:commandButton>
       </h:form>
       </div>
       <div class="imgFilter">
         <img src="../image/PINTR001/QQ2012-Wallpaper-White.jpg" height="700" width="1364">
-      </div>
-      
+      </div>      
+    </div>
     </div>
   </f:view>
 </body>

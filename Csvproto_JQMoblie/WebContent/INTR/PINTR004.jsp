@@ -17,12 +17,16 @@
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 <!-- 公共CSS文件 -->
+<!-- 
 <link rel="stylesheet" type="text/css" href="../css/common/reset.css" />
 <link rel="stylesheet" type="text/css" href="../css/common/jquery.alerts.css" />
 <link rel="stylesheet" type="text/css" href="../css/common/pagelayout.css" />
+ -->
 <!-- 公共JavaScript文件 -->
+<!--
 <script type="text/javascript" src="../script/common/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="../script/common/jquery.alerts.js"></script>
+ -->
 <!-- PINTR001 -->
 <link rel="stylesheet" type="text/css" href="../css/INTR/PINTR004.css" id="PINTR001_css" >
 <script type="text/javascript" src="../script/INTR/PINTR004.js"></script>
@@ -31,7 +35,7 @@
   <f:view>
   <div data-role="page">
     <div data-role="header">注册账号</div>
-    <div id="mainDiv" >
+    <div id="mainDiv" data-role="content">
         <h:form id="pintr004Form">
             <div>
                                 账号(*)：
@@ -49,9 +53,13 @@
                     value="#{PINTR004Form.truename }"></h:inputText><h:messages for="truename" showDetail="true" showSummary="false"></h:messages>
             </div>
             <div>
-                                年龄：
+                <!-- 年龄：
                 <h:inputText id="age" value="#{PINTR004Form.age }"></h:inputText><h:messages for="age" showDetail="true" showSummary="false"></h:messages>
-                <h:selectOneListbox id="selectage"></h:selectOneListbox>
+                <h:selectOneListbox id="selectage" size="5" ></h:selectOneListbox>
+                 -->
+                <label for="slider-0">年龄：</label>
+                <input type="range" name="selectage2" id="selectage2" value="#{PINTR004Form.age }" min="0" max="100" />
+                <h:messages for="age" showDetail="true" showSummary="false"></h:messages>
             </div>
             <div>
                                 出生年月
@@ -77,7 +85,7 @@
             </div>            
         </h:form>
     </div>
-    <footer>八丹网</footer>
+    <div data-role="footer">八丹网</div>
     </div>
     </f:view>
 </body>
