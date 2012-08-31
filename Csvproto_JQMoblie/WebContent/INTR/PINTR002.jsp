@@ -6,6 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="refresh" content="2; url=./PINTR001.faces">
 <title>成功登录</title>
+    <!-- JQMobile -->
+    <link rel="stylesheet" type="text/css" href="../css/common/jquery.mobile-1.1.1.css">
+    <script type="text/javascript" src="../script/common/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../script/common/jquery.mobile-1.1.1.js"></script>
 </head>
 <body>
 rigth!

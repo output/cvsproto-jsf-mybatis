@@ -13,9 +13,9 @@
 <title>用户登录</title>
 <!-- JQmobile -->
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/common/jquery.mobile-1.1.1.css">
+    <script type="text/javascript" src="../script/common/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../script/common/jquery.mobile-1.1.1.js"></script>
 <!-- 公共CSS文件 -->
 <!-- 
 <link rel="stylesheet" type="text/css" href="../css/common/reset.css" />

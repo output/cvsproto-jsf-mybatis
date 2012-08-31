@@ -29,6 +29,6 @@ function changeTheme(){
         panel.className  = 'themeBlack';
     }else{
         panel.className  = 'theme';
-    }    
+    }
     return false;
 }

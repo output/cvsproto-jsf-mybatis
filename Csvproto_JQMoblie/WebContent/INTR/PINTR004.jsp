@@ -13,9 +13,9 @@
 <title>注册账号</title>
 <!-- JQmobile -->
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/common/jquery.mobile-1.1.1.css">
+    <script type="text/javascript" src="../script/common/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../script/common/jquery.mobile-1.1.1.js"></script>
 <!-- 公共CSS文件 -->
 <!-- 
 <link rel="stylesheet" type="text/css" href="../css/common/reset.css" />
@@ -34,7 +34,7 @@
 <body>
   <f:view>
   <div data-role="page">
-    <div data-role="header">注册账号</div>
+    <div data-role="header"><a date-rel="back">后退</a>&nbsp;注册账号</div>
     <div id="mainDiv" data-role="content">
         <h:form id="pintr004Form">
             <div>
@@ -77,12 +77,12 @@
                 <h:inputText id="telphone" value="#{PINTR004Form.phone }">
                     <f:converter converterId="kang.PhoneConverter" />
                     <f:validateLength minimum="11" maximum="11"/>
-                    <f:convertNumber pattern="#10000000000"/>                    
+                    <f:convertNumber pattern="#10000000000"/>
                 </h:inputText><h:messages for="telphone" showDetail="true" showSummary="false"></h:messages>
             </div>
             <div>
                 <h:commandButton action="#{PINTR004Event.submitRegister }" value="提交" id="submitRegister"></h:commandButton>
-            </div>            
+            </div>
         </h:form>
     </div>
     <div data-role="footer">八丹网</div>
